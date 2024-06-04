@@ -1,0 +1,23 @@
+Reflection
+
+Implementing a JSON parser using regular expressions and custom parsing routines has been an insightful and educational task. 
+
+Understanding JSON Structure: One of the first challenges was thoroughly understanding the JSON format, with all its nuances, such as how it handles different data types (arrays, objects, strings, numbers, literals). This foundational knowledge was crucial in determining how to approach tokenization and parsing.
+
+Regular Expressions: Using regex for tokenization was initially challenging, especially for more complex elements like strings that can contain escaped characters. However, regular expressions provided a powerful tool to quickly identify and extract these components from the input string:
+    Matching strings while accounting for escape sequences.
+    Identifying valid number formats including scientific notation.
+    Recognizing and parsing literals like true, false, and null.
+
+Recursive Parsing: A significant part of the complexity arose from parsing nested structures, such as arrays within objects and vice versa. Recursion was essential to handle these cases but required careful management to avoid infinite loops or missteps in the parsing logic.
+
+Error Handling: Introducing meaningful error messages was challenging but necessary to make the parser robust and user-friendly. Providing context-specific errors, including the position in the input string, helped significantly in debugging and enhancing the parser's usability.
+
+Testing: Ensuring the parser could handle a wide variety of valid and invalid JSON strings involved extensive testing. It was important to cover edge cases, such as:
+    Empty arrays and objects.
+    Strings with various escape sequences.
+    Numbers in different formats (including edge cases like leading zeros).
+    Invalid JSON structures to confirm that errors were caught effectively.
+
+Conclusion
+Overall, implementing myJSONParse has been a rewarding exercise in both theoretical knowledge and practical application. It required a good understanding of JSON specification, mastery of regular expressions, meticulous crafting of recursive parsing logic, and robust error handling techniques. This project not only deepened my understanding of JSON but also honed my skills in creating parsers and handling complex string manipulations.
